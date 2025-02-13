@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width:100%;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color:#ffe5e5;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap:20px;
+    max-width:500px;
+    margin:20px;
+}
+
+.container .tenor-gif-embed {
+    max-width:200px;
+
+}
+
+.container .btn {
+    display: flex;
+    gap:25px;
+}
+
+.btn a {
+    position: relative;
+    text-decoration: none;
+    color: #111;
+    background: #fff;
+    padding:10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem hs1(0,0%,0%,0.3);
+}
+
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 24px;
+    animation: fall linear infinite;
+    top: 0;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.falling-love {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer; /* Biar kelihatan bisa diklik */
+    transition: transform 0.2s;
+}
+
+.falling-love:hover {
+    transform: scale(1.2); /* Efek membesar saat hover */
+}
+
+.falling-heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    clip-path: path("M10 4 C6 0, 0 3, 0 10 C0 15, 10 20, 10 20 C10 20, 20 15, 20 10 C20 3, 14 0, 10 4 Z");
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh) scale(1); opacity: 1; }
+    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+}
+
+
